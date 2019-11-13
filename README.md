@@ -1,3 +1,1 @@
-# integration
-
-https://mauradnly.github.io/integrationRicoh/
+# integrationRicoh.github.io
