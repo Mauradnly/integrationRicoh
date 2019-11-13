@@ -1,1 +1,1 @@
-# integrationRicoh.github.io
+# integrationRicoh
