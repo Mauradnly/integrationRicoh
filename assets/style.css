@@ -1,0 +1,30 @@
+/* -- General --
+--------------------------------------------- -- */
+
+html {
+    font-size: 62,5%;
+}
+
+body {
+
+}
+
+/**************** nav ****************/
+
+
+/**************** contents ****************/
+
+
+/**************** footer ****************/
+
+
+/* -- Responsive Stylesheet --
+--------------------------------------------- -- */
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  
+}
+
+@media screen and (min-width: 800px) and (max-width: 2880px) {
+
+}
