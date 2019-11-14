@@ -9,8 +9,8 @@
 
         <!-- css link -->
         <link rel="stylesheet" type="text/css" href="assets/style.css">
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+        <!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+-->
         <!-- link font -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800&display=swap" rel="stylesheet"> 
         
@@ -31,7 +31,7 @@
                 <div id="avatar">
                     <img src="assets/img/avatar-man.png" alt="Avatar" >
                 </div>
-                <a href="#">james</a>
+                <a href="#" id="pseudo">James v</a>
             </li>
         </ul>
     </nav>
@@ -41,100 +41,107 @@
         <!------- services ------->
         <!-- container -->
         <div id="contentService">
-            <div class="container" id="1">
-                <span class="infoBulle"><i class="fas fa-info-circle"></i></span>
-                <form action="" >
-                    <div>
-                        <label>mon age</label>
-                        <input type="number" id="age" value="">
-                    </div>
-                    <div>
-                        <label>pays de résidence</label>
-                        <input type="text" id="pays" value="">
-                    </div>
-                    <div>
-                        <label>type de véhicule</label>
-                        <input type="text" id="vehicule" value="">
-                    </div>
-                    <div>
-                        <label>assurance</label>
-                        <input type="button" id="aucune" value="">
-                        <label>aucune</label>
-                        <input type="button" id="basique" value="">
-                        <input type="button" id="medium" value="">
-                        <input type="button" id="premium" value="">
-                    </div>
-                    <div>
-                        <label>option(s)</label>
-                            <div class="custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                <label class="custom-control-label" for="customSwitch1">Système de navigation GPS</label>
-                            </div>
-                            <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="customSwitch2">
-                                    <label class="custom-control-label" for="customSwitch2">Conducteur supplémentaire</label>
-                            </div>
-                            <div class="custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch3">
-                                <label class="custom-control-label" for="customSwitch3">Siège enfant</label>
-                            </div>
-                            <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="customSwitch4">
-                                    <label class="custom-control-label" for="customSwitch4">Isofix ou équivalent</label>
-                            </div>
-                            <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="customSwitch5">
-                                    <label class="custom-control-label" for="customSwitch5">Nacelle bébé (0-12mois)</label>
-                            </div>
-                    </div>
-                    </div>
-                </form>
-            </div>
-
-            <div class="container" id="2">
-                <span class="infoBulle"><i class="fas fa-info-circle"></i></span>
-                <div>
-                    <label>Date de départ</label>
-                    <input type="date" id="dateDepart" value="">
+            <div class="flexblock">
+                <div class="container" id="un">
+                    <h2>Selectionnez la prestation souhaitée</h2>
+                    <span class="infoBulle"><i class="fas fa-info-circle"></i></span>
+                    <form action="" >
+                        <div>
+                            <label>mon age</label>
+                            <input type="number" id="age" value="">
+                        </div>
+                        <div>
+                            <label>pays de résidence</label>
+                            <input type="text" id="pays" value="">
+                        </div>
+                        <div>
+                            <label>type de véhicule</label>
+                            <input type="text" id="vehicule" value="">
+                        </div>
+                        <div>
+                            <label>assurance</label>
+                            <input type="button" id="aucune" value="">
+                            <label>aucune</label>
+                            <input type="button" id="basique" value="">
+                            <input type="button" id="medium" value="">
+                            <input type="button" id="premium" value="">
+                        </div>
+                        <div>
+                            <label>option(s)</label>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                    <label class="custom-control-label" for="customSwitch1">Système de navigation GPS</label>
+                                </div>
+                                <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                        <label class="custom-control-label" for="customSwitch2">Conducteur supplémentaire</label>
+                                </div>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                    <label class="custom-control-label" for="customSwitch3">Siège enfant</label>
+                                </div>
+                                <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                                        <label class="custom-control-label" for="customSwitch4">Isofix ou équivalent</label>
+                                </div>
+                                <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                                        <label class="custom-control-label" for="customSwitch5">Nacelle bébé (0-12mois)</label>
+                                </div>
+                        </div>
+                        </div>
+                    </form>
                 </div>
-                <div>
-                    <label>Date de retour</label>
-                    <input type="date" id="dateRetour" value="">
+                <div class="container" id="deux">
+                    <h2>Ou souhaitez vous récupérer votre véhicule ?</h2>
+                    <span class="infoBulle"><i class="fas fa-info-circle"></i></span>
+                    <form action="" >
+                        <div>
+                            <label>Date de départ</label>
+                            <input type="date" id="dateDepart" value="">
+                        </div>
+                        <div>
+                            <label>Date de retour</label>
+                            <input type="date" id="dateRetour" value="">
+                        </div>
+                        <div>
+                            <label>Heure de départ</label>
+                            <input type="time" id="heureDepart" value="">
+                        </div>
+                        <div>
+                            <label>Heure de retour</label>
+                            <input type="datetime" id="heureRetour" value="">
+                        </div>
+                        <div>
+                            <label>Heure de retour</label>
+                            <input type="text" id="heureRetour" value="" autocomplete="text a écrire">
+                        </div>
+                    </form>
                 </div>
-                <div>
-                    <label>Heure de départ</label>
-                    <input type="time" id="heureDepart" value="">
-                </div>
-                <div>
-                    <label>Heure de retour</label>
-                    <input type="datetime" id="heureRetour" value="">
-                </div>
-                <div>
-                    <label>Heure de retour</label>
-                    <input type="text" id="heureRetour" value="" autocomplete="text a écrire">
-                </div>
-                
-            </div>
+            </div> 
         </div>
-    </div> 
-        <footer>
-                <div class="negatif">retour</button>
-                <div class="positif">suivant</button>
-        </footer>
 
         <!------- image ------->
         <div class="containerImage"> 
             <div class="imageCar">
                     <img src="assets/img/global.png" alt="Car" class="imgCar">
             </div>
-        </div>  
+        </div> 
+
+    </div> 
+        <footer>
+                <div class="negatif">retour</button>
+                <div class="positif">suivant</button>
+        </footer> 
     
      
 		
     </body>
     <!-- js link -->
+    <!--
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    -->
     <script src="assests/main.js"></script> 
 </html>

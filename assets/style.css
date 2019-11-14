@@ -2,7 +2,8 @@
 - General Stylesheet -
 ==================================================================== */
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+/*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+*/
 
 html {
     font-size: 62,5%;
@@ -105,10 +106,14 @@ footer {
 
 @media screen and (min-width: 800px) and (max-width: 2880px) {
 
+    .brandlogo {
+        margin-left: 2rem;
+    }
+
     #nav a {
         width: 15rem;
         height: 4.4rem;
-        margin-left: 2rem;
+        padding-left: 1rem;
     }
 
     .navbarNav {
@@ -121,6 +126,11 @@ footer {
         padding-right: 2rem;
     }
     
+    li {
+        list-style: none;
+    }
+
+
     .navbarNav li a {
         font-size: 0.85rem;
         font-weight: 600;
@@ -129,13 +139,20 @@ footer {
         text-decoration: none;
     }
 
+    li #pseudo {
+        text-transform: initial;
+        color: rgb(184, 183, 183);
+        margin-top: 0;
+        margin-bottom: 1rem;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
     #avatar {
         width: 2rem;
         height: 2rem;
-        border-radius: 1rem;
-        background-color: #fff;
-        padding: 0.2rem;
-        display: flex;
+        display: inline-flex;
+        margin: 0;
     }
 
     .navbarNav img{
@@ -145,9 +162,12 @@ footer {
     
     /**************** contents ****************/
 
-     #contents{
+    .flexblock {
         display: flex;
         padding-top: 7rem;
+    }
+     #contents{
+        display: block;
     }
 
     /*  services  */
