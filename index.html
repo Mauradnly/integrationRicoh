@@ -43,9 +43,12 @@
         <!-- ////////////////// contents ////////////////// -->
         <div id="contents">
             <!------- services ------->
+
             <!-- container -->
             <div id="contentService">
                 <div class="flexblock">
+
+                     <!------- form1 ------->
                     <div class="container" id="un">
                         <h2>Selectionnez la prestation souhaitée</h2>
                         <span class="infoBulle"><i class="fas fa-info-circle"></i></span>
@@ -64,36 +67,38 @@
                             </div>
                             <div>
                                 <label>assurance</label>
-                                <input type="button" id="aucune" value="aucune">
-                                <input type="button" id="basique" value="basique">
-                                <input type="button" id="medium" value="medium">
-                                <input type="button" id="premium" value="premium">
+                                <input type="button" class="off buttonA" id="aucune" value="Aucune">
+                                <input type="button" class="off buttonA" id="basique" value="Basique">
+                                <input type="button" class="off buttonA" id="medium" value="Medium">
+                                <input type="button" class="off buttonA" id="premium" value="Premium">
                             </div>
                             <div>
                                 <label>option(s)</label>
                                 <div class="switch">
-                                    <input type="checkbox" class="checkbox" id="option1" value="">
-                                    <label class="textOption" for="option1">Système de navigation GPS</label>
+                                    <input type="checkbox" class="checkbox" id="option1" value="desactiver">
+                                    <span class="cherckboxText">Système de navigation GPS</span>
                                 </div>
                                 <div class="switch">
-                                    <input type="checkbox" class="checkbox" id="option2" value="">
-                                    <label class="textOption" for="option2">Conducteur supplémentaire</label>
+                                    <input type="checkbox" class="checkbox" id="option2" value="desactiver">
+                                    <span class="cherckboxText">Conducteur supplémentaire</span>
                                 </div>
                                 <div class="switch">
-                                    <input type="checkbox" class="checkbox" id="option3" value="">
-                                    <label class="textOption" for="option3">Siège enfant</label>
+                                    <input type="checkbox" class="checkbox" id="option3" value="desactiver">
+                                    <span class="cherckboxText">Siège enfant</span>
                                 </div>
                                 <div class="switch">
-                                    <input type="checkbox" class="checkbox" id="option4" value="">
-                                    <label class="textOption" for="option4">Isofix ou équivalent</label>
+                                    <input type="checkbox" class="checkbox" id="option4" value="desactiver">
+                                    <span class="cherckboxText">Isofix ou équivalent</span>
                                 </div>
                                 <div class="switch">
-                                    <input type="checkbox" class="checkbox" id="option5" value="">
-                                    <label class="textOption" for="option5">Nacelle bébé (0-12mois)</label>
+                                    <input type="checkbox" class="checkbox" id="option5" value="desactiver">
+                                    <span class="cherckboxText">Nacelle bébé (0-12mois)</span>
                                 </div>
                             </div>
                         </form>
                     </div>
+
+                     <!------- form2 ------->
                     <div class="container cacher" id="deux" >
                         <h2>Ou souhaitez vous récupérer votre véhicule ?</h2>
                         <span class="infoBulle"><i class="fas fa-info-circle"></i></span>
@@ -115,37 +120,91 @@
                                 <input type="datetime" id="heureRetour" value="">
                             </div>
                             <div>
-                                <label>Heure de retour</label>
-                                <input type="text" id="heureRetour" value="" autocomplete="text a écrire">
+                                <label>ville</label>
+                                <input type="text" id="ville" value="">
+                            </div>
+                            <div>
+                                <label>agence</label>
+                                <input type="text" id="agence" value="">
+                            </div>
+                            <div>
+                                <label>code promo</label>
+                                <input type="text" id="codePromo" value="">
+                            </div>
+                            <div>
+                                <label>commentaires</label>
+                                <input type="text" id="commentaires" value="">
                             </div>
                         </form>
                     </div>
 
+                     <!------- ReponseForm ------->
                     <div class="container cacher" id="trois" >
-                            <h2>Ou souhaitez vous récupérer votre véhicule ?</h2>
+                            <h2>Récapitulatif de votre commande</h2>
                             <span class="infoBulle"><i class="fas fa-info-circle"></i></span>
-                            <form action="">
+                                <!------- Reponseform1 ------->
                                 <div>
-                                    <label>MON AGE</label>
-                                    <p id="reponseAge"></p>
+                                    <div>
+                                        <label>Mon age</label>
+                                        <p id="reponseAge"></p>
+                                    </div>
+                                    <div>
+                                        <label>type de véhicule</label>
+                                        <p id="reponseVehicule"></p>
+                                    </div>
+                                    <div>
+                                        <label>assurrance</label>
+                                        <p id="reponseAssurance"></p>
+                                    </div>
+                                    <div>
+                                        <label>option(s)</label>
+                                        <p id="reponseOption1"></p>
+                                        <p id="reponseOption2"></p>
+                                        <p id="reponseOption3"></p>
+                                        <p id="reponseOption4"></p>
+                                        <p id="reponseOption5"></p>
+                                    </div>
+                                    <div>
+                                        <label>pays de résidence</label>
+                                        <p id="reponsePays"></p>
+                                    </div>
                                 </div>
+
+                                <!------- Reponseform2 ------->
                                 <div>
-                                    <label>Date de retour</label>
-                                    <input type="date" id="dateRetour" value="">
+                                    <div>
+                                        <label>date de depart</label>
+                                        <p id="reponseDateDepart"></p>
+                                    </div>
+                                    <div>
+                                        <label>heure de depart</label>
+                                        <p id="reponseHeureDepart"></p>
+                                    </div>
+                                    <div>
+                                        <label>ville</label>
+                                        <p id="reponseVille"></p>
+                                    </div>
+                                    <div>
+                                        <label>code promo</label>
+                                        <p id="reponseCodePromo"></p>
+                                    </div>
+                                    <div>
+                                        <label>commentaires</label>
+                                        <p id="reponseCom"></p>
+                                    </div>
+                                    <div>
+                                        <label>date de retour</label>
+                                        <p id="reponseDateRetour"></p>
+                                    </div>
+                                    <div>
+                                        <label>heure de retour</label>
+                                        <p id="reponseHeureRetour"></p>
+                                    </div>
+                                    <div>
+                                        <label>Agence</label>
+                                        <p id="reponseAgence"></p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <label>Heure de départ</label>
-                                    <input type="time" id="heureDepart" value="">
-                                </div>
-                                <div>
-                                    <label>Heure de retour</label>
-                                    <input type="datetime" id="heureRetour" value="">
-                                </div>
-                                <div>
-                                    <label>Heure de retour</label>
-                                    <input type="text" id="heureRetour" value="" autocomplete="text a écrire">
-                                </div>
-                            </form>
                         </div>
 
                     <!------- footer ------->
@@ -153,14 +212,17 @@
                         <div class="negatif" id="return">retour</div>
                         <div class="positif" id="submit">suivant</div>
                     </footer>
+
                 </div>
             </div>
+
             <!------- image ------->
             <div class="containerImage">
                 <div class="imageCar">
                     <img src="assets/img/global.png" alt="Car" class="imgCar">
                 </div>
             </div>
+
         </div>
     </div>
 </body>

@@ -46,8 +46,38 @@ body {
 }
 
 label {
+    display: block;
     text-transform: uppercase;
     font-weight: 900;
+}
+
+input {
+
+}
+
+.buttonA {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.off {
+    background-color: none;
+    color: rgb(116, 115, 115);
+    border: 0;
+    border-radius: 0.5rem;
+}
+
+.on{
+    background-color: rgb(133, 206, 194);
+    border: 0;
+    border-radius: 0.5rem;
+    color: #fff
+}
+
+span .cherckboxText {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgb(199, 199, 199);
 }
 
 /**************** footer ****************/
@@ -186,7 +216,6 @@ footer {
      #contents{
         display: flex;
         height: 92vh;
-        background-color: brown;
     }
 
     /*  services  */
@@ -195,17 +224,21 @@ footer {
         overflow:scroll;
         width: 50%;
         height: 100%;
-        background-color: blue;
     }
 
     .flexblock {
         display: block;
         padding-top: 7rem;
-        background-color: aqua;
     }
 
     .container {
         margin-left: 10%;
+    }
+
+    .buttonA {
+        margin-right: 1rem;
+        width: 11rem;
+        height: 2.4rem;
     }
 
     footer {
@@ -221,7 +254,7 @@ footer {
         width: 50%;
         display: flex;
         justify-content: center;
-        background-color: rgb(192, 240, 247);
+        background-color: rgb(169, 245, 255);
     }
 
     .imageCar {
