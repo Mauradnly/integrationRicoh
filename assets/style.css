@@ -87,7 +87,7 @@ span .cherckboxText {
 footer {
     text-transform: uppercase;
     background-color: #fff;
-    box-shadow: 0px -8px 10px rgba(114, 114, 114, 0.2);
+    box-shadow: 0px -4px 10px rgba(114, 114, 114, 0.1);
     display: inline;
 }
 
@@ -231,6 +231,7 @@ footer {
     .flexblock {
         display: block;
         padding-top: 7rem;
+        padding-bottom: 8rem;
     }
 
     .container {
@@ -238,14 +239,32 @@ footer {
     }
 
     .buttonA {
-        margin-right: 1rem;
         width: 11rem;
+        height: 2.4rem;
+        margin-top: 0.8rem;
+        margin-bottom: 1.6rem;
+        margin-right: 1rem;
+    }
+
+    .texte{
+        margin-top: 0.8rem;
+        margin-bottom: 1.6rem;
+        border-radius: 0.5rem;
         height: 2.4rem;
     }
 
-    input {
-        border-radius: 0.5rem;
-        height: 1.5rem;
+
+    .switch {
+        display: block;
+    }
+
+    .checkbox{
+        margin: 0;
+    }
+
+    .cherckboxText {
+        width: 11.2rem;
+        display: inline-table;
     }
 
     footer {
@@ -253,7 +272,33 @@ footer {
         bottom: 0;
         width: 50%;
         height: 7rem;
-        background-color: chartreuse;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .buttonF {
+        height: 2.4rem;
+        width: 12rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .positif {
+        background-color: rgb(133, 206, 194); 
+        margin-right: 2rem;
+    }
+
+    .negatif {
+        background-color: #fff; 
+        border: 1px solid rgb(133, 206, 194);
+        margin-left: 2rem;
     }
     
     /**** asider ****/
@@ -261,7 +306,7 @@ footer {
         width: 50%;
         display: flex;
         justify-content: center;
-        background-color: rgb(169, 245, 255);
+        background-color: rgb(133, 206, 194);
     }
 
     .imageCar {

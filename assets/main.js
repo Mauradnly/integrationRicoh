@@ -29,39 +29,52 @@ const reponseOption4 = document.getElementById("reponseOption4");
 const reponseOption5 = document.getElementById("reponseOption5");
 
 /*---------- element de réponse page 2 ---------- */
-/*const dateDepart = document.getElementById("dateDepart");
+const dateDepart = document.getElementById("dateDepart");
 const dateRetour = document.getElementById("dateRetour");
 const heureDepart = document.getElementById("heureDepart");
 const heureRetour = document.getElementById("heureRetour");
 const ville = document.getElementById("ville");
 const agence = document.getElementById("agence");
 const codePromo = document.getElementById("codePromo");
-const commentaires = document.getElementById("commentaires");*/
+const commentaires = document.getElementById("commentaires");
 
 /*---------- endroit ou afficher réponse page 2 ---------- */
-/*const reponseDateDepart = document.getElementById("reponseDateDepart");
+const reponseDateDepart = document.getElementById("reponseDateDepart");
 const reponseHeureDepart = document.getElementById("reponseHeureDepart");
 const reponseVille = document.getElementById("reponseVille");
 const reponseCodePromo = document.getElementById("reponseCodePromo");
 const reponseCom = document.getElementById("reponseCom");
 const reponseDateRetour = document.getElementById("reponseDateRetour");
 const reponseHeureRetour = document.getElementById("reponseHeureRetour");
-const reponseAgence = document.getElementById("reponseAgence");*/
+const reponseAgence = document.getElementById("reponseAgence");
 
 /*---------- boutton ---------- */
 const submit = document.getElementById("submit");
 const retour = document.getElementById("return");
 
 /*---------- algo assurance ---------- */
+const assurance = document.getElementById("assurance");
+
+function setAssurance(type){
+    assurance.value = type;
+}
+
 aucune.addEventListener("click", aucuneCheck);
 
 function aucuneCheck() {
   if (aucune.className.indexOf("off") != -1) {
     aucune.classList.remove("off");
     aucune.classList.add("on");
-  } else {
-    aucune.classList.remove("on");
-    aucune.classList.add("off");
+
+    basique.classList.add("off");
+    basique.classList.remove("on");
+
+    medium.classList.add("off");
+    medium.classList.remove("on");
+
+    premium.classList.add("off");
+    premium.classList.remove("on");
+    setAssurance("aucune")
   }
 }
 
@@ -71,9 +84,23 @@ function basiqueCheck() {
   if (basique.className.indexOf("off") != -1) {
     basique.classList.remove("off");
     basique.classList.add("on");
+
+    aucune.classList.add("off");
+    aucune.classList.remove("on");
+
+    medium.classList.add("off");
+    medium.classList.remove("on");
+
+    premium.classList.add("off");
+    premium.classList.remove("on");
+
+    setAssurance("basique")
   } else {
     basique.classList.remove("on");
     basique.classList.add("off");
+    aucune.classList.remove("off");
+    aucune.classList.add("on");
+    setAssurance("aucune")
   }
 }
 
@@ -83,9 +110,23 @@ function mediumCheck() {
   if (medium.className.indexOf("off") != -1) {
     medium.classList.remove("off");
     medium.classList.add("on");
+
+    aucune.classList.add("off");
+    aucune.classList.remove("on");
+
+    basique.classList.add("off");
+    basique.classList.remove("on");
+
+    premium.classList.add("off");
+    premium.classList.remove("on");
+
+    setAssurance("medium")
   } else {
     medium.classList.remove("on");
     medium.classList.add("off");
+    aucune.classList.remove("off");
+    aucune.classList.add("on");
+    setAssurance("aucune")
   }
 }
 
@@ -95,20 +136,41 @@ function premiumCheck() {
   if (premium.className.indexOf("off") != -1) {
     premium.classList.remove("off");
     premium.classList.add("on");
+
+    aucune.classList.add("off");
+    aucune.classList.remove("on");
+
+    basique.classList.add("off");
+    basique.classList.remove("on");
+
+    medium.classList.add("off");
+    medium.classList.remove("on");
+
+    setAssurance("premium")
   } else {
     premium.classList.remove("on");
     premium.classList.add("off");
+    aucune.classList.remove("off");
+    aucune.classList.add("on");
+    setAssurance("aucune")
   }
 }
 
-if (aucune.classList == "on"){
-  let assurance = "aucune";
-}else if (basique.classList == "on"){
-let assurance = "basique";        
-}else if (medium.classList == "on"){
-  let assurance = "medium";
-}else if (premium.classList == "on"){
-  let assurance = "premium";
+function testValeurAssurance() {
+  if (aucune.classList == "on"){
+    let assurance = "aucune";
+  }else if (basique.classList == "on"){
+  let assurance = "basique";        
+  }else if (medium.classList == "on"){
+    let assurance = "medium";
+  }else if (premium.classList == "on"){
+    let assurance = "premium";
+  }
+}
+
+/*---------- algo checkbox option ---------- */
+function optionVisible(){
+
 }
 
 /*---------- fonction ---------- */
@@ -129,6 +191,14 @@ function recupForm1() {
     containerDeux.classList.remove("cacher");
     page += 1;
   } else if (page == 2) {
+    reponseDateDepart.innerHTML = dateDepart.value;
+    reponseDateRetour.innerHTML = dateRetour.value;
+    reponseHeureDepart.innerHTML = heureDepart.value;
+    reponseHeureRetour.innerHTML = heureRetour.value;
+    reponseVille.innerHTML = ville.value;
+    reponseAgence.innerHTML = agence.value;
+    reponseCodePromo.innerHTML = codePromo.value;
+    reponseCom.innerHTML = commentaires.value;
     containerDeux.classList.add("cacher");
     containerTrois.classList.remove("cacher");
     submit.innerHTML = "VALIDER";
