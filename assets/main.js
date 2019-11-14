@@ -182,11 +182,11 @@ function recupForm1() {
     reponsePays.innerHTML = pays.value;
     reponseVehicule.innerHTML = vehicule.value;
     reponseAssurance.innerHTML = assurance.value;
-    reponseOption1.innerHTML = option1.value;
-    reponseOption2.innerHTML = option2.value;
-    reponseOption3.innerHTML = option3.value;
-    reponseOption4.innerHTML = option4.value;
-    reponseOption5.innerHTML = option5.value;
+    reponseOption1.innerHTML = option1.checked ? "Système de navigation GPS": "";
+    reponseOption2.innerHTML = option2.checked ? "Conducteur supplémentaire" : "";
+    reponseOption3.innerHTML = option3.checked ? "Siège enfant" : "";
+    reponseOption4.innerHTML = option4.checked ? "Isofix ou équivalent" : "";
+    reponseOption5.innerHTML = option5.checked ? "Nacelle bébé (0-12mois)" : "";
     containerUn.classList.add("cacher");
     containerDeux.classList.remove("cacher");
     page += 1;
