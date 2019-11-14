@@ -52,7 +52,9 @@ label {
 }
 
 input {
-
+    border-radius: 0.5rem;
+    border: 1px solid rgb(138, 138, 138);
+    padding: 0.5rem
 }
 
 .buttonA {
@@ -239,6 +241,11 @@ footer {
         margin-right: 1rem;
         width: 11rem;
         height: 2.4rem;
+    }
+
+    input {
+        border-radius: 0.5rem;
+        height: 1.5rem;
     }
 
     footer {

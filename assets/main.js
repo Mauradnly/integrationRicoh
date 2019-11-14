@@ -7,27 +7,48 @@ let page = 1;
 const age = document.getElementById("age");
 const pays = document.getElementById("pays");
 const vehicule = document.getElementById("vehicule");
-const aucune = document.getElementById("Aucune");
-const basique = document.getElementById("Basique");
-const medium = document.getElementById("Medium");
-const premium = document.getElementById("Premium");
-/*const option1 = document.getElementById("option1");
+const aucune = document.getElementById("aucune");
+const basique = document.getElementById("basique");
+const medium = document.getElementById("medium");
+const premium = document.getElementById("premium");
+const option1 = document.getElementById("option1");
 const option2 = document.getElementById("option2");
 const option3 = document.getElementById("option3");
 const option4 = document.getElementById("option4");
-const option5 = document.getElementById("option5");*/
+const option5 = document.getElementById("option5");
 
 /*---------- endroit ou afficher réponse page 1 ---------- */
 const reponseAge = document.getElementById("reponseAge");
 const reponsePays = document.getElementById("reponsePays");
 const reponseVehicule = document.getElementById("reponseVehicule");
 const reponseAssurance = document.getElementById("reponseAssurance");
-/*const reponseOption1 = document.getElementById("reponseOption1");
-const reponseOption1 = document.getElementById("reponseOption2");
-const reponseOption1 = document.getElementById("reponseOption3");
-const reponseOption1 = document.getElementById("reponseOption4");
-const reponseOption1 = document.getElementById("reponseOption5");*/
+const reponseOption1 = document.getElementById("reponseOption1");
+const reponseOption2 = document.getElementById("reponseOption2");
+const reponseOption3 = document.getElementById("reponseOption3");
+const reponseOption4 = document.getElementById("reponseOption4");
+const reponseOption5 = document.getElementById("reponseOption5");
 
+/*---------- element de réponse page 2 ---------- */
+/*const dateDepart = document.getElementById("dateDepart");
+const dateRetour = document.getElementById("dateRetour");
+const heureDepart = document.getElementById("heureDepart");
+const heureRetour = document.getElementById("heureRetour");
+const ville = document.getElementById("ville");
+const agence = document.getElementById("agence");
+const codePromo = document.getElementById("codePromo");
+const commentaires = document.getElementById("commentaires");*/
+
+/*---------- endroit ou afficher réponse page 2 ---------- */
+/*const reponseDateDepart = document.getElementById("reponseDateDepart");
+const reponseHeureDepart = document.getElementById("reponseHeureDepart");
+const reponseVille = document.getElementById("reponseVille");
+const reponseCodePromo = document.getElementById("reponseCodePromo");
+const reponseCom = document.getElementById("reponseCom");
+const reponseDateRetour = document.getElementById("reponseDateRetour");
+const reponseHeureRetour = document.getElementById("reponseHeureRetour");
+const reponseAgence = document.getElementById("reponseAgence");*/
+
+/*---------- boutton ---------- */
 const submit = document.getElementById("submit");
 const retour = document.getElementById("return");
 
@@ -35,25 +56,60 @@ const retour = document.getElementById("return");
 aucune.addEventListener("click", aucuneCheck);
 
 function aucuneCheck() {
-  if (aucune.className == "off") {
-    aucune.className.remove("off");
-    aucune.className.add("on");
+  if (aucune.className.indexOf("off") != -1) {
+    aucune.classList.remove("off");
+    aucune.classList.add("on");
   } else {
-    aucune.className.remove("on");
-    aucune.className.add("off");
+    aucune.classList.remove("on");
+    aucune.classList.add("off");
   }
 }
 
-if (aucune.classList == "off"){
+basique.addEventListener("click", basiqueCheck);
+
+function basiqueCheck() {
+  if (basique.className.indexOf("off") != -1) {
+    basique.classList.remove("off");
+    basique.classList.add("on");
+  } else {
+    basique.classList.remove("on");
+    basique.classList.add("off");
+  }
+}
+
+medium.addEventListener("click", mediumCheck);
+
+function mediumCheck() {
+  if (medium.className.indexOf("off") != -1) {
+    medium.classList.remove("off");
+    medium.classList.add("on");
+  } else {
+    medium.classList.remove("on");
+    medium.classList.add("off");
+  }
+}
+
+premium.addEventListener("click", premiumCheck);
+
+function premiumCheck() {
+  if (premium.className.indexOf("off") != -1) {
+    premium.classList.remove("off");
+    premium.classList.add("on");
+  } else {
+    premium.classList.remove("on");
+    premium.classList.add("off");
+  }
+}
+
+if (aucune.classList == "on"){
   let assurance = "aucune";
-}/*
-else if (basique.classList == 'off'){
+}else if (basique.classList == "on"){
 let assurance = "basique";        
-}else if (medium.value =='off'){
+}else if (medium.classList == "on"){
   let assurance = "medium";
-}else if (premium.value == 'off'){
+}else if (premium.classList == "on"){
   let assurance = "premium";
-}*/
+}
 
 /*---------- fonction ---------- */
 submit.addEventListener("click", recupForm1);
@@ -64,6 +120,11 @@ function recupForm1() {
     reponsePays.innerHTML = pays.value;
     reponseVehicule.innerHTML = vehicule.value;
     reponseAssurance.innerHTML = assurance.value;
+    reponseOption1.innerHTML = option1.value;
+    reponseOption2.innerHTML = option2.value;
+    reponseOption3.innerHTML = option3.value;
+    reponseOption4.innerHTML = option4.value;
+    reponseOption5.innerHTML = option5.value;
     containerUn.classList.add("cacher");
     containerDeux.classList.remove("cacher");
     page += 1;
