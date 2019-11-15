@@ -98,8 +98,6 @@ footer {
 @media screen and (min-width: 200px) and (max-width: 800px) {
   /**************** nav ****************/
  
-  
-
   #nav {
     position: fixed;
     top: 0;
@@ -208,10 +206,6 @@ footer {
 
 @media screen and (min-width: 800px) and (max-width: 2880px) {
 
-    /*.wrapper { 
-        height: 100vh;
-  }*/
-
     .brandlogo {
         margin-left: 2rem;
         
@@ -241,7 +235,6 @@ footer {
     li {
         list-style: none;
     }
-
 
     .navbarNav li a {
         font-size: 0.85rem;
@@ -274,7 +267,6 @@ footer {
     
     /**************** contents ****************/
 
-   
      #contents{
         display: flex;
         height: 92vh;
@@ -312,7 +304,6 @@ footer {
         border-radius: 0.5rem;
         height: 2.4rem;
     }
-
 
     .switch {
         display: block;
